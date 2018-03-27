@@ -1,0 +1,10 @@
+# Bilingual Slovak-Slovene Word Representations
+
+This repository contains the code and evaluation data for the project.
+
+The implementation is based on the hyperwords project. Learn more at: https://bitbucket.org/omerlevy/hyperwords
+
+Parts of the code are reused from:
+"A Strong Baseline for Learning Cross-Lingual Word Embeddings from Sentence Alignments"
+Omer Levy, Anders Søgaard, and Yoav Goldberg. EACL 2017.
+https://bitbucket.org/omerlevy/xling_embeddings
