@@ -11,7 +11,6 @@ import re
 sent_split_pat = re.compile(r' ?\$ \$ \$ \$ ?')
 
 
-
 def main():
     args = docopt("""
     Lemmatizes the TSV format of bilingual data in Slovak and Slovene languages.
@@ -63,6 +62,7 @@ def process_sentences_sk(sents, outfile):
     text = 'sk\t' + ''.join(sents).strip(' $')
     text = re.sub(sent_split_pat, '\nsk\t', text)
     outfile.write(text + '\n')
+                  
                     
 if __name__ == '__main__':
     main()
