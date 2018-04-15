@@ -1,0 +1,6 @@
+[submodule "sksl/scripts/obeliks-git/Obeliks"]
+	path = sksl/scripts/obeliks-git/Obeliks
+	url = git@github.com:fmph-nlp/obeliks-lemmatizer.git
+[submodule "sksl/scripts/obeliks-git/Latino"]
+	path = sksl/scripts/obeliks-git/Latino
+	url = https://github.com/LatinoLib/LATINO.git

@@ -5,8 +5,6 @@ import sys
 from ufal_morphodita import *
 from snktagset import ufal2snk
 
-tagger_file = '/home/ifrag/projects/crossling/xling/sksl/scripts/data/tagger_model.sk'
-
 def init_tagger(tagger_file):
     tagger = Tagger.load(tagger_file)
     if not tagger:
@@ -16,8 +14,6 @@ def init_tagger(tagger_file):
 
 
 def tag(text, tagger=None, morpho=None):
-    if not tagger:
-        tagger = init_tagger(tagger_file)
     forms = Forms()
     lemmas = TaggedLemmas()
     tokens = TokenRanges()
@@ -38,7 +34,7 @@ def tag(text, tagger=None, morpho=None):
         lf = lemma.lemma, form
         sentence.append(lf)
       yield sentence
-      
+
 
 def lemmatize(text):
     for s in tag(text):
