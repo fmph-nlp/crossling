@@ -50,7 +50,11 @@ def read_vocabs(corpus_filename, thr):
     idx = 1
     with open(corpus_filename) as corpus:
         for line in corpus:
-            lang, text = line.strip().split('\t')
+            try:
+                lang, text = line.strip().split('\t')
+            except ValueError as e:
+                print('cannot split line: ' + line, file=sys.stderr)
+                continue
             update_vocab(lang, text)
 
             if idx % 1000 == 0:
@@ -70,7 +74,10 @@ def read_pairs(corpus_filename, vocabs, outfile):
 
     with open(corpus_filename) as corpus:
         for line in corpus:
-            lang, text = line.strip().split('\t')
+            try:
+                lang, text = line.strip().split('\t')
+            except ValueError as e:
+                continue
 
             if idx % 1000 == 0:
                 print('line %s' % idx, end='\r')
