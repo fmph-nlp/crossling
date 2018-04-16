@@ -41,7 +41,7 @@ FNR % 100 == 0 { print "Line " + FNR >"/dev/stderr" }
 	}
 
 	# Create the BOW vector
-	PROCINFO["sorted_in"] = "@ind_num_asc"
+	#PROCINFO["sorted_in"] = "@ind_num_asc"
 	for (word in vocab) {
 		if (word in tokens) {
 			printf(" 1")
