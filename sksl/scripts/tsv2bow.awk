@@ -10,9 +10,9 @@ function cmp_str_idx(i1, v1, i2, v2)
 
 BEGIN {
 	if (ARGC < 3) {
-		print "Usage: tsv2bow.awk <TSV> <VOCAB>"      >"/dev/stderr"
-		print "    <TSV>:   tab-separated input file" >"/dev/stderr"
-		print "    <VOCAB>: vocabulary file"          >"/dev/stderr"
+		print "Usage: tsv2bow.awk <VOCAB> <CORPUS>"    >"/dev/stderr"
+		print "    <VOCAB>:  vocabulary file"          >"/dev/stderr"
+		print "    <CORPUS>: tab-separated input file" >"/dev/stderr"
 		exit 1
 	}
 
