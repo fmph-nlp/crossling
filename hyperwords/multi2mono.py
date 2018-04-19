@@ -11,9 +11,9 @@ def main():
     with open(path) as fin:
         for line in fin:
             token = line.split()[0]
-            language = token[:3]
-            word = token[4:]
-            new_line = word + line.strip()[4+len(word):]
+            language = token[:2]
+            word = token[3:]
+            new_line = word + line.strip()[3+len(word):]
             l2e[language].append(new_line)
 
     for language, embeddings in l2e.items():
